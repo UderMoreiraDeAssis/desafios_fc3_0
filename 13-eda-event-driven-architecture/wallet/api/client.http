@@ -1,0 +1,27 @@
+### POST /clients
+POST http://localhost:8080/clients HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Uder M. de A.",
+    "email": "um-bom-treino@email.com"
+}
+
+### POST /accounts
+### modifique o client_id abaixo para o valor do ID recebido do POST acima.
+POST http://localhost:8080/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "client_id": "c739e310-9e4d-4e02-baa8-906a86484948"
+}
+
+### POST /transactions
+POST http://localhost:8080/transactions HTTP/1.1
+Content-Type: application/json
+
+{
+    "account_id_from": "292bd47e-95b1-46aa-9145-59855153c866",
+    "account_id_to": "796016e9-2e0e-416d-9416-dcd1815778e9",
+    "amount": 100
+}
